@@ -14,12 +14,16 @@ export const App = () => {
 
   // DON'T change the code below
   const increase = () => {
-    if (count % 5 === 0) {
-      add100();
+  setCount(prev => {
+    const newCount = prev + 1;
+
+    if (newCount % 5 === 0) {
+      return newCount + 100;
     }
 
-    addOne();
-  };
+    return newCount;
+  });
+};
 
   return (
     <div className="App">
