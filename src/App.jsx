@@ -14,17 +14,17 @@ export const App = () => {
 
   // DON'T change the code below
   const increase = () => {
-  setCount(prev => {
-    const newCount = prev + 1;
+    setCount(prev => {
+      const newCount = prev + 1;
 
-    if (prev % 5 === 0) {
-      return newCount + 100;
-    }
+      if (prev % 5 === 0) {
+        return newCount + 100;
+      }
 
-    return newCount;
-  });
-};
-  
+      return newCount;
+    });
+  };
+
   return (
     <div className="App">
       <h1 className="App__title">{`Count: ${count}`}</h1>
